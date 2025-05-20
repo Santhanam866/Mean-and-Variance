@@ -49,9 +49,33 @@ It shows the distance of a random variable from its mean. It is calcualted as
 
 # Program :
 
+DEVELOPED:SANTHANAM S
+
+
+REGISTER NO:212224040293
+```
+
+
+import numpy as np
+
+L = list(map(int, input().split()))
+f = np.bincount(L)
+p = f / f.sum()
+x = np.arange(len(f))
+
+mean = np.dot(x, p)
+var = np.dot(x**2, p) - mean**2
+SD = np.sqrt(var)
+
+print(f"The Mean arrival rate is {mean:.3f}")
+print(f"The Variance of arrival from feeder is {var:.3f}")
+print(f"The Standard deviation of arrival from feeder is {SD:.3f}")
+
+```
 
 
 # Output : 
+![Screenshot 2025-05-14 131656](https://github.com/user-attachments/assets/269ee2a7-5d8b-4a8e-9230-788ba8285c4a)
 
 # Results :
 The mean and variance of arrivals of objects from feeder using probability distribution are calculated.
